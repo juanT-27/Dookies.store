@@ -1,0 +1,136 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Dookies</title>
+  <link rel="icon" type="image/png" href="./src/dookiesLogo.png">
+
+  <link rel="stylesheet" href="index.css">
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Montserrat+Alternates:wght@100;300;500&display=swap" rel="stylesheet">
+</head>
+
+<body>
+  <header class="header container">
+    <div class="dropdownMenu">
+      <i class="fa-solid fa-bars fa-lg" id="dropdownBtn" style="color: #000000;"></i>
+
+      <nav class="header-main-nav ">
+        <div class="menu-list">
+          <a href="./pages/store.html" target="" class="menu-link">Tienda</a>
+          <a href="#" target="" class="menu-link">Quienes somos</a>
+          <a href="#" target="" class="menu-link">Contacto</a>
+        </div>
+
+      </nav>
+
+    </div>
+
+    <div class="header-logo">
+
+    </div>
+
+    <div class="header-user-actions">
+      <i class="fa-regular fa-star" class="user-menuBtn" id="favBtn" style="color: #000000;"></i>
+      <i class="fa-solid fa-cart-shopping" class="user-menuBtn" id="cartBtn" style="color: #000000;"></i>
+    </div>
+  </header>
+
+  <div class="cart displayHidden">
+    <div class="cartInfo">
+      <p>No has agregado ningun producto al carrito</p>
+    </div>
+
+  </div>
+  <div class="favProducts displayHidden " id="favProducts">
+    <div class="favProducts-info">
+      <p>No has agregado ningun producto como favorito</p>
+    </div>
+  </div>
+
+  <main class="container">
+    <section class="hero">
+      <div class="hero-textbox">
+        <b>
+          <p class="hero-title">Snacks frescos y saludablos</p>
+        </b>
+        <p class="hero-subtitle">solo lo mejor <br>para tus peludos</p>
+        <a href="./pages/store.html" class="hero-button">Ir a la tienda </a>
+      </div>
+
+    </section>
+
+    <h2 class="text-pre-section">
+      ¿Conoces nuestros productos?
+    </h2>
+
+    <section class="collections container">
+    
+      <div class="slider">
+        <div class="collection-card">
+          <div class="collection-card-img">
+            <img src="/src/miloplato.jpg" alt="">
+          </div>
+          <div class="collection-card-desc">
+            <a href="#">Galletas -></a>
+          </div>
+        </div>
+
+        <div class="collection-card">
+          <div class="collection-card-img">
+            <img src="/src/icecream.jpg" alt="">
+          </div>
+          <div class="collection-card-desc">
+            <a href="#">Paletas -> </a>
+          </div>
+        </div>
+
+        <div class="collection-card">
+          <div class="collection-card-img">
+            <img src="/src/birthday.avif" alt="">
+          </div>
+          <div class="collection-card-desc">
+            <a href="#">Pasteles -></a>
+          </div>
+        </div>
+
+      </div>
+
+
+    </section>
+
+
+  </main>
+  <footer class="container">
+ 
+      <div class="contacto-card">
+        <h4>Telefono</h4>
+        <h4>Quejas y reclamos:</h4>
+        <p>3196187314</p>
+        <h4>Contacto por WhatsApp:</h4>
+        <i class="fa-brands fa-whatsapp"></i>
+        <p>319187314</p>
+      </div>
+
+      <div class="contacto-card">
+        <h4>Email</h4> <i class="fa-regular fa-envelope"></i>
+        <h5>dookiesstores@gmail.com</h5>
+      </div>
+
+      <div class="contacto-card">
+        <h4>Sobre nosotros</h4>
+        <a href="">Instagram</a>
+        <a href="">tiktok</a>
+        <a href="">Quienes somos</a>
+      </div>
+    
+  </footer>
+  <script type="module" src="app.js"></script>
+  <script src="https://kit.fontawesome.com/cf733db6d2.js" crossorigin="anonymous"></script>
+</body>
+
+</html>

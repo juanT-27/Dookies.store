@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dookies</title>
+
+    <link rel="shortcut icon" href="../src/dookiesLogo.png" type="image/x-icon">
+    <link rel="stylesheet" href="../index.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat+Alternates:wght@100;300;500&display=swap" rel="stylesheet">
+
+
+</head>
+
+<body>
+    <header class="header">
+        <div class="dropdownMenu">
+            <i class="fa-solid fa-bars fa-lg" id="dropdownBtn" style="color: #000000;"></i>
+
+            <nav class="header-main-nav ">
+                <div class="menu-list">
+                    <a href="#" target="" class="menu-link">Tienda</a>
+                    <a href="#" target="" class="menu-link">Quienes somos</a>
+                    <a href="#" target="" class="menu-link">Contacto</a>
+                </div>
+
+            </nav>
+
+        </div>
+
+        <div class="header-logo">
+
+        </div>
+
+        <div class="header-user-actions">
+            <i class="fa-regular fa-star" class="user-menuBtn" id="favBtn" style="color: #000000;"></i>
+            <i class="fa-solid fa-cart-shopping" class="user-menuBtn" id="cartBtn" style="color: #000000;"></i>
+            <i class="fa-solid fa-user"></i>
+        </div>
+    </header>
+    <div class="cart displayHidden">
+        <div class="cartInfo">
+            <p>No has agregado ningun producto al carrito</p>
+        </div>
+
+    </div>
+    <div class="favProducts displayHidden " id="favProducts">
+        <div class="favProducts-info">
+            <p>No has agregado ningun producto como favorito</p>
+        </div>
+    </div>
+
+    <main class="container">
+        <div class="products-nav flex-full-center container">
+            <h3 class="filterTitle">Categorías para filtrar</h3>
+            <form action="" class="filterForm">
+                <div class="filterGroup">
+                    <select name="" id="">
+                        <option value="">ingredientes</option>
+                        <option value="higado">
+                            Higado
+                        </option>
+                        <option value="higado">
+                            pollo
+                        </option>
+                        <option value="higado">
+                            zanahoria
+                        </option>
+                        <option value="higado">
+                            calabacin
+                        </option>
+                    </select>
+                </div>
+                <div class="filterGroup">
+
+                    <select name="" id="">
+                        <option value="">Precios</option>
+                        <option value="mayor">
+                            De mayor a menor
+                        </option>
+                        <option value="mayor">
+                            de menor a mayor
+                        </option>
+                    </select>
+                </div>
+
+                <div class="filterGroup">
+
+                    <select name="" id="">
+                        <option value="">todos</option>
+                        <option value="mayor">
+                            Perros grandes
+                        </option>
+                        <option value="mayor">
+                            Perros Medianos
+                        </option>
+                        <option value="mayor">
+                            Perros pequeños
+                        </option>
+                    </select>
+                </div>
+            </form>
+        </div>
+        <div class="  row " id="products-container">
+      
+            
+        </div>
+    </main>
+    <script src="https://kit.fontawesome.com/cf733db6d2.js" crossorigin="anonymous"></script>
+    <script type="module" src="../app.js"></script>
+</body>
+
+<template id="product-template">
+    <div class="oneCol-sm product-card flex-full-center">
+        <div class="product-card-img background-center">
+           
+        </div>
+        <div class="product-card-info">
+            <p class="product-card-title">  </p>
+            <p class="product-card-price"></p>
+        </div>
+        <div class="product-card-actions">
+            <button class="product-favBtn"><i class="fa-regular fa-star" ></i></button>
+            <button><i class="fa-regular fa-eye"></i></button>
+            <button class="product-cartBtn"><i class="fa-solid fa-cart-shopping" ></i></button>
+            
+        </div>
+    </div>
+</template>
+
+</html>
