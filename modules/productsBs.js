@@ -33,7 +33,7 @@ const productsData = [
     title:"Helado de Pollo",
     id: "helado-01",
     ingredients:["Pollo", "Zanahoria"],
-    price:0,
+    price:5000,
     recommended:["grandes"],
     weight:100,
     img:"../src/icecream.jpg"

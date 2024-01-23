@@ -10,7 +10,8 @@
     <link rel="stylesheet" href="../index.css">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Montserrat+Alternates:wght@100;300;500&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat+Alternates:wght@100;300;500&display=swap"
+        rel="stylesheet">
 
 
 </head>
@@ -41,9 +42,19 @@
             <i class="fa-solid fa-user"></i>
         </div>
     </header>
-    <div class="cart displayHidden">
+    <div class="cart displayHidden" id="cart">
         <div class="cartInfo">
-            <p>No has agregado ningun producto al carrito</p>
+            <h3>Tu carrito de compras</h3>
+           
+            <div class="renderProducts">
+                
+            </div>
+
+           <div class="cart-actions">
+            <button id="payProducts"> Pagar carrito </button>
+            <button id="continueBuying" class="darkBtn"> seguir comprando </button>
+           </div>
+          
         </div>
 
     </div>
@@ -105,8 +116,8 @@
             </form>
         </div>
         <div class="  row " id="products-container">
-      
-            
+
+
         </div>
     </main>
     <script src="https://kit.fontawesome.com/cf733db6d2.js" crossorigin="anonymous"></script>
@@ -116,19 +127,36 @@
 <template id="product-template">
     <div class="oneCol-sm product-card flex-full-center">
         <div class="product-card-img background-center">
-           
+
         </div>
         <div class="product-card-info">
-            <p class="product-card-title">  </p>
+            <p class="product-card-title"> </p>
             <p class="product-card-price"></p>
         </div>
         <div class="product-card-actions">
-            <button class="product-favBtn"><i class="fa-regular fa-star" ></i></button>
-            <button><i class="fa-regular fa-eye"></i></button>
-            <button class="product-cartBtn"><i class="fa-solid fa-cart-shopping" ></i></button>
-            
+            <i class="fa-regular fa-star product-favBtn"></i>
+            <i class="fa-regular fa-eye"></i>
+            <i class="fa-solid fa-cart-shopping product-cartBtn"></i>
+
         </div>
     </div>
+</template>
+<template id="cart-product-template">
+    <div class="product-small-card">
+        <div class="productSmallImg">
+            <img class="img" src="" alt="">
+        </div>
+            <div class="product-cart-desc">
+                <h3 class="title"></h3>
+                
+                <form class="formToAddUnits">
+                    <Label>Unidades</Label>
+                    <input class="productUnits" type="number" >
+                </form>
+
+                <p class="productPrice"></p>
+            </div>
+       </div>
 </template>
 
 </html>

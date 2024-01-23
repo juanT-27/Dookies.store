@@ -1,5 +1,7 @@
 import { menu } from "./modules/menu.js";
-import createProductCard from "./modules/stores.js";
+import {createProductCard, productsInteraction} from "./modules/stores.js";
+
+const productsContainer= document.querySelector("#products-container")
 
 document.addEventListener("DOMContentLoaded", (e) => {
   document.addEventListener("click", (e) => {
@@ -11,6 +13,16 @@ document.addEventListener("DOMContentLoaded", (e) => {
       menu.showHideElement(menu.favInterface);
     }
   });
+
+  productsContainer.addEventListener("click", (e)=>{
+    const productId= e.target.getAttribute("product-id")
+    if(e.target.classList.contains("product-favBtn")){
+      productsInteraction(productId, "favoriteList");
+    } else if( e.target.classList.contains("product-cartBtn")){
+      productsInteraction(productId, "buyList")
+    }
+  })
+
 
   createProductCard()
 });
