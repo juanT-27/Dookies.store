@@ -3,9 +3,9 @@ const menuDropdownBtn = document.getElementById("dropdownBtn"),
   searchBarBtn = document.getElementById("search-barBtn"),
   searchBar = document.getElementById("search-bar"),
   cartBtn = document.getElementById("cartBtn"),
-  cartInterface = document.querySelector(".cart"),
-  favBtn= document.getElementById("favBtn"),
-  favInterface= document.querySelector(".favProducts")
+  cartInterface = document.querySelector(".cart");
+  
+
 
 const showMenu = (hideElement) => {
   const visibilityState = getComputedStyle(hideElement).visibility;
@@ -31,7 +31,6 @@ const menu = {
   showHideElement,
   cartBtn,
   cartInterface,
-  favBtn,
-  favInterface,
+  
 };
 export { menu };

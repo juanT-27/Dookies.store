@@ -1,5 +1,5 @@
 import productsData from "./productsBs.js";
-import{renderBuyList, renderFavList, cartList, cartPrice} from "./cart.js"
+import{renderBuyList, renderFavList, cartList, cartTotalPrice} from "./cart.js"
 
 const favList= [];
 
@@ -19,10 +19,10 @@ function createProductCard() {
       ".product-card-price"
     ).innerText = `$ ${product.price} cop`;
     const cartBtn = clone.querySelector(".product-cartBtn");
-    const favBtn = clone.querySelector(".product-favBtn");
+    
 
     cartBtn.setAttribute("product-id", `${product.id}`);
-    favBtn.setAttribute("product-id", `${product.id}`);
+    
 
     $fragment.appendChild(clone);
     productsContainer.appendChild($fragment);
@@ -44,19 +44,16 @@ const findProductById = (id, data) => {
 const productsInteraction = (id, action) => {
   const product = findProductById(id, productsData);
   
-  if (action === "favoriteList") {
-    favList.push(product);
-  } else if (action === "buyList") {
+ if (action === "buyList") {
     const productPassToCart = {
       product,
       units: 1,
     };
 
-   const findPro= cartList.findIndex((element)=> (element.product.id === id))
-   if(findPro !== -1){
-    cartList[findPro].units+=1
-    cartList[findPro].product.price= cartList[findPro].product.price * cartList[findPro].units
-
+   const findProduct= cartList.findIndex((element)=> (element.product.id === id))
+  
+   if(findProduct !== -1){
+    cartList[findProduct].units+=1
    } else { cartList.push(productPassToCart)}
 
    renderBuyList()

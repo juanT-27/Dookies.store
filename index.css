@@ -93,7 +93,7 @@
     
   }
   button{
-    font-family: 'Indie Flower', cursive;
+    font-family: var();
     font-weight: 400;
     border: none;
     padding: 0.5rem 0.5rem;
@@ -261,12 +261,14 @@ flex-direction: column;
   margin: 1rem;
 }
 .formToAddUnits{
+  width: 4rem;
+  margin: 1rem 0;
   display: flex;
   flex-direction: column;
   align-items: center;
 }
-.formToAddUnits input{
-  width: 3rem;
+.formToAddUnits .productUnits{
+  width: 2rem;
 }
 
 footer{
@@ -277,7 +279,7 @@ footer{
   align-items: center;
   justify-content: space-around;
   background-color: var(--tertiary-color);
-  color: var(--white-color);
+  color: var(--dark-color);
 
 }
 
@@ -428,6 +430,7 @@ main{
 /* P */
 
 .product-small-card{
+  width: 100%;
   background-color: var(--primary-color);
   margin: 1rem 0;
   padding: 1rem;
@@ -487,7 +490,17 @@ main{
   border-radius:  0 0 2rem 2rem;
   display: flex;
   background-color: var(--primary-color);
+  padding: 1rem 0;
+  align-items: center;
   justify-content: space-around;
+}
+
+.product-card-actions i{
+  text-align: center;
+  color: var(--white-color);
+  width: 2rem;
+  
+  
 }
 
 .products-nav{
@@ -501,6 +514,9 @@ margin-top: 2rem;
 
 /* Q */
 /* R */
+.render{
+  width: 100%;
+}
 
 .row{
   display: flex;
@@ -573,6 +589,10 @@ margin-top: 2rem;
 
     .cart{
       width: 50%;
+    }
+
+    .formToAddUnits .productUnits{
+      width: 4rem;
     }
 
     .productSmallImg{

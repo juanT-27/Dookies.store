@@ -37,18 +37,19 @@
         </div>
 
         <div class="header-user-actions">
-            <i class="fa-regular fa-star" class="user-menuBtn" id="favBtn" style="color: #000000;"></i>
             <i class="fa-solid fa-cart-shopping" class="user-menuBtn" id="cartBtn" style="color: #000000;"></i>
             <i class="fa-solid fa-user"></i>
         </div>
     </header>
     <div class="cart displayHidden" id="cart">
         <div class="cartInfo">
-            <h3>Tu carrito de compras</h3>
+            <h2>Tu carrito de compras</h2>
            
             <div class="renderProducts">
                 
             </div>
+
+            <h2>Total de tu pedido: <span class="totalCartPrice">0</span></h2>
 
            <div class="cart-actions">
             <button id="payProducts"> Pagar carrito </button>
@@ -58,12 +59,7 @@
         </div>
 
     </div>
-    <div class="favProducts displayHidden " id="favProducts">
-        <div class="favProducts-info">
-            <p>No has agregado ningun producto como favorito</p>
-        </div>
-    </div>
-
+   
     <main class="container">
         <div class="products-nav flex-full-center container">
             <h3 class="filterTitle">Categorías para filtrar</h3>
@@ -134,7 +130,6 @@
             <p class="product-card-price"></p>
         </div>
         <div class="product-card-actions">
-            <i class="fa-regular fa-star product-favBtn"></i>
             <i class="fa-regular fa-eye"></i>
             <i class="fa-solid fa-cart-shopping product-cartBtn"></i>
 
@@ -149,12 +144,12 @@
             <div class="product-cart-desc">
                 <h3 class="title"></h3>
                 
-                <form class="formToAddUnits">
+                <form class="formToAddUnits" id="formToAddUnits">
                     <Label>Unidades</Label>
                     <input class="productUnits" type="number" >
                 </form>
 
-                <p class="productPrice"></p>
+                <p class="productPrice">Precio:</p>
             </div>
        </div>
 </template>
